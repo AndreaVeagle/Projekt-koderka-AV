@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Web CKP ZK</title>
+
+	<!-- Google Fonts: Raleway 400, Open Sans 400(i)/700(i) -->
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Raleway&display=swap" rel="stylesheet">
+
+	<!-- Naše vlastní CSS -->
+	<link rel="stylesheet" href="/css/style.css">
+</head>
+
+
+<body class="{% if page.url === '/kp/' %}kp-page{% elseif page.url === '/ppo/' %}ppo-page{% elseif page.url === '/materialy/' %}materialy-page{% else %}homepage{% endif %}">
+<!-- O CKP -->
+
+
+<header class="header">
+     <img class="imgLogoCKP" src="/images/imgLogoCKP.png" alt="Logo CKP">
+
+ <!--menu-->
+
+ <ul class="menu__list menu__list--inline">
+    <li class="menu__item menu__item--hidden"> <a href="/index/">O nás</a></li>
+    <li class="menu__item"> <a href="/kp/">Kariérové poradenství</a></li>
+    <li class="menu__item"> <a href="/ppo/">Prevence předčasných odchodů</a></li>
+    <li class="menu__item"> <a href="/materialy/">Materiály</a></li>
+    <li class="menu__item"> <a href="/index/#ontakt">Kontakt</a></li>
+</ul>
+
+ </header>
+
+<main class="main">
+
+	{{ content | safe }}
+
+</main>
+
+
+<footer class="footer">
+    <p>© 2023, Andrea Vorlová</p>
+</footer>
+
+
+</body>
+</html>

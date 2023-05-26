@@ -1,0 +1,624 @@
+:root {
+
+	--primary: hsl(120, 66%, 83%);
+  --secondary: hsl(220, 66%, 83%);
+  --terciaary: hsl(320, 66%, 83%);
+  --quaternary: hsl(420, 66%, 83%);
+  --caption: hsla(120, 15%, 50%);
+  --caption2: hsl(220, 15%, 50%);
+  --caption3: hsl(320, 15%, 50%);
+  --caption4: hsl(420, 15%, 50%);
+  --hover: hsl(140, 3%, 79%);
+  --title: hsl(140, 3%, 79%);
+	--accent: rgb(240, 212, 102);
+
+	--spacer: 16px;
+	--spacer-quarter: calc(var(--spacer) / 4);
+	--spacer-half: calc(var(--spacer) / 2);
+	--spacer-bigger: calc(var(--spacer) * 1.5);
+	--spacer-double: calc(var(--spacer) * 2);
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-size: 16px;
+  font-family: 'Puritan', sans-serif;
+  line-height: 1.5;
+  width: 100%;
+  margin: 0;
+  padding: 0; 
+  background-color: var(--primary);
+}
+
+.main {
+  flex: 1;
+  padding-top: var(--spacer-quarter);
+}
+
+/*změna barvy podstránek*/
+  .kp-page {
+    background-color: var(--secondary);
+  }
+  
+  .ppo-page {
+    background-color: var(--terciaary);
+  }
+  
+  .materialy-page {
+    background-color: var(--quaternary);
+  }
+  
+p {
+  margin: 0;
+  padding: 0;
+}
+
+h3 {
+  justify-content: center;
+  text-align: center;
+  font-weight: bold;
+  font-size: 25px;
+  margin: auto;
+}
+
+h5 {
+  justify-content: center;
+}
+
+div {
+    width: 100%;
+    align-items: center;
+  }
+
+.header {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.item-frame {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding-left: var(--spacer);
+  padding-right: var(--spacer);
+}
+
+.item-about {
+  margin-bottom: var(--spacer-half);
+}
+
+.item__title,
+.item__title--KP,
+.item__title--PPO,
+.item__title--M {
+  margin-bottom: var(--spacer-bigger);
+}
+
+/* Menu */
+.menu__list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  background-color: black;
+}
+
+/*asi navíc umazat*/
+.menu__list--inline {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Styly pro položky menu */
+.menu__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu__item a {
+  color: var(--hover);
+  text-decoration: none;
+  font-weight: 700;
+  padding: 15px 40px;
+  display: inline-block;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.menu__item a:hover,
+.menu__item a:focus,
+.menu__item a:active {
+  background-color: var(--hover);
+  color: black;
+}
+
+.a {
+  justify-content: center;
+  align-items: center;
+}
+
+.imgLogoCKP {
+    max-width: 100%;
+    max-height: 100px;
+    align-items: center;
+    object-fit: contain;
+  }
+
+/*stránka KP, PPO, MAT*/
+.item__about--KP,
+.item__about--PPO,
+.item__about--M {
+  display: flex;
+  padding: 0 var(--spacer-quarter);
+  justify-content: center; 
+}
+
+.item__image--KP,
+.item__image--PPO,
+.item__image--M {
+  flex: 0 0 calc(33.33% - var(--spacer-half)); 
+  padding: var(--spacer-quarter);
+}
+
+.item__frame--KP,
+.item__frame--PPO,
+.item__frame--M {
+  flex: 0 0 calc(66.67% - var(--spacer-half)); 
+  padding: 0 var(--spacer-quarter);
+}
+
+
+.item__image--KP img,
+.item__image--PPO img,
+.item__image--M img {
+  width: 100%;
+  height: auto;
+}
+
+.item__frame--KP,
+.item__frame--PPO,
+.item__frame--M {
+  text-align: left; 
+}
+
+.item__titleoffer--KP, 
+.item__titlemore--KP {
+  background-color: var(--caption2);
+  padding-left: var(--spacer-double);
+  padding-right: var(--spacer-double);
+}
+
+.item__titleoffer--PPO, 
+.item__titlemore--PPO {
+  background-color: var(--caption3);
+  padding-left: var(--spacer-double);
+  padding-right: var(--spacer-double);
+
+}
+
+
+/*zobrazení  Motto CKP*/
+.item__about {
+  display: flex;
+  padding: 0 var(--spacer-quarter);
+  justify-content: center; 
+}
+
+.item__image {
+  flex: 0 0 calc(33.33% - var(--spacer-half)); 
+  padding: var(--spacer-quarter);
+}
+
+.item__frame {
+  flex: 0 0 calc(66.67% - var(--spacer-half)); 
+  padding: 0 var(--spacer-quarter);
+}
+
+.item__about {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.item__image img {
+  width: 100%;
+  height: auto;
+}
+
+.item__frame {
+  text-align: left; 
+}
+
+.item__text,
+.item__text--KP,
+.item__text--PPO,
+.item__text--M {
+  font-size: 18px;
+  padding-left: var(--spacer-bigger);
+  padding-right: var(--spacer-bigger);
+}
+
+.item__textoffer {
+  padding: var(--spacer);
+}
+
+.item__titleoffer, 
+.item__titlemore {
+  padding-left: var(--spacer-double);
+  padding-right: var(--spacer-double);
+}
+
+/*footer*/
+footer {
+    left: 0;
+    width: 100%;
+    background-color: black;
+    text-align: center;
+    color: white;
+    font-size: 14px;
+  }
+
+/*konktakt*/
+.item item__contact {
+  padding-left: var(--spacer);
+  padding-right: var(--spacer);
+}
+
+  .rowContact {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .boxperson {
+    display: flex;
+    flex-shrink: 0;
+    width: calc(33.33% - 10px); 
+  }
+
+  .personInfo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .contactTitle {
+    margin-bottom: 10px;
+  }
+  
+  .icon {
+    display: block;
+    width: 16px;
+    height: 16px;
+    margin: 5px;
+  }
+
+  .profil {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    align-items: center;
+    margin-right: var(--spacer-half);
+  }
+
+.phone, .mail {
+  display: flex;
+}
+
+.item-textmore {
+  font-style: italic;
+}
+
+
+.item__image,
+.item__image--KP,
+.item__image--PPO,
+.item__image--M {
+  display: inline-block;
+  overflow: hidden;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.479);
+}
+
+.item__image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.item.item__list {
+  list-style-type: none;
+  margin-left: 20px;
+}
+ /*Motto CKP*/
+
+.item.item__list-item:before {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: 0;
+  width: 8px;
+  height: 8px;
+  background-color: var(--caption);
+  border-radius: 50%;
+}
+
+/*program ke stažení*/
+.download-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #337ab7;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+.download-button:hover {
+  background-color: #23527c;
+}
+
+
+  /* screen mobil */
+  @media screen and (max-width: 768px) {
+    .header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: var(--primary);
+      padding: 0 var(--spacer-quarter);
+    }
+  
+    .menu__list {
+      display: block;
+      text-align: center;
+      background-color: black;
+      color: var(--primary);
+    }
+
+    .menu__item {
+      width: 100%;
+      margin: 0px;
+    }
+
+    .menu__item a {
+      color: var(--primary);
+      font-size: 14px;
+    }
+
+    .menu__item a:hover,
+    .menu__item a:focus,
+    .menu__item a:active {
+      background-color: var(--primary);
+      color: black;
+    }
+
+    .imgLogoCKP {
+      width: 100%;
+    }
+    
+    /*zobrazení mobil Motto CKP*/
+    .item__about {
+      display: flex;
+       padding: 0 var(--spacer-quarter);
+       justify-content: center; 
+  }
+    
+    
+    .item__image {
+      flex: 0 0 150px; 
+      padding: var(--spacer-quarter);
+      align-items: center;
+      justify-content: center;
+      display: flex;
+
+    }
+    
+    .item__frame {
+      flex: 0 0 100%; /* Bude se rozpínat na celou šířku v mobilním rozlišení */
+      padding: 0 var(--spacer-quarter);
+    }
+    
+    .item__about {
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+    .item__image img {
+        width: 100%;
+        height: auto;
+      }
+
+    .item__frame {
+        text-align: center;
+      }
+
+  
+  /* reference v mobilu */
+  .item-titlemore {
+    text-align: center;
+    margin-bottom: var(--spacer);
+    padding: 0 var(--spacer-quarter);
+  }
+  
+  .h2 {
+    font-style: italic;
+    margin-bottom: var(--spacer-half);
+  }
+  
+  .item-titlemore {
+    font-weight: bold;
+    font-style: italic;
+    text-align: center;
+    margin-bottom: var(--spacer-quarter);
+  }
+  
+  .item-textmore {
+    font-style: italic;
+    text-align: center;
+    margin-bottom: var(--spacer);
+  }
+
+
+  
+/*Kontakty v mobilu*/
+  .boxperson {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .profil {
+    display: none;
+  }
+
+  img {
+    display: none;
+  }
+}
+
+/*screen pc*/
+  @media screen and (min-width: 769px) {
+
+    /*Reference - pc screen*/
+    .item-more {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      padding-bottom: var(--spacer);
+    }
+    
+    .item-titlemore {
+      width: 100%;
+      text-align: center;
+      background-color: var(--caption);
+      color: black;
+      padding: 10px;
+      box-sizing: border-box;
+    }
+    
+    .item-framemore {
+      width: calc(33.33% - 20px);
+      margin: 10px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+      flex-direction: column; 
+      justify-content: space-between;
+    }
+    
+    .item-framemore p {
+      margin: 0;
+    }
+    
+    .item-button {
+      align-self: flex-end;
+      padding: 10px 20px;
+      background-color: var(--title);
+      color: black;
+      border-color: black;
+      cursor: pointer;
+    }
+    
+    .item-button:hover {
+      background-color: #e2e2e2;
+    }
+  
+    /*Nabídka vzdělávání - pc screen*/
+.item.item__offer,
+.item.item__titleoffer--KP,
+.item.item__offer--PPO
+ {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.item__titleoffer {
+  width: 100%;
+  text-align: center;
+  background-color: var(--caption);
+  color: black;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.item__frameoffer {
+  width: calc(50% - 20px);
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  flex-direction: column; 
+  justify-content: space-between;
+}
+
+.item__frameoffer--KP,
+.item__frameoffer--PPO {
+  width: calc(50% - 20px);
+  margin: 10px auto;
+  padding: 10px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  flex-direction: column; 
+  justify-content: center;
+}
+
+.item__frameoffer p {
+  margin: 0;
+}
+
+.download-button {
+  align-self: flex-end;
+  padding: 10px 20px;
+  background-color: var(--title);
+  color: black;
+  border-color: black;
+  cursor: pointer;
+  text-decoration: none; /* added */
+}
+
+.download-button:hover {
+  background-color: #e2e2e2;
+}
+
+  }
+
+
+  /*SA*/
+  .safe-arrival {
+    display: inline-block;
+  }
+  
+  .safe-arrival__link {
+    display: block;
+    text-decoration: none;
+  }
+  
+  .safe-arrival__frame {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .safe-arrival__image {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    margin-bottom: 10px;
+  }
+  
+  .safe-arrival__title {
+    font-size: 16px;
+    margin-top: 0;
+  }
+  
+  .safe-arrival__text {
+    display: block;
+    text-align: center;
+    margin-top: 5px;
+  }
